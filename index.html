@@ -2,10 +2,23 @@
 <html>
   <head>
 <meta http-equiv="Cache-Control" content="no-store, max-age=0">
+
+    <script>
+document.getElementById('myId').innerHTML=listCookies()
+function listCookies() {
+    var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+}
+    return aString;
+}
+</script>
 </head>
   <body>
     <p>HELLO WORL3444D!</p>
     <button onClick="window.location.reload(true);">Refresh Page</button>
+    <span id="myId"><span>
     <p>END</p>
   </body>
 </html>
